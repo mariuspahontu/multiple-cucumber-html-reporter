@@ -181,7 +181,7 @@
                         <% if(step.result) { %>
                             <% if (step.result.error_message) { %>
                                 <div id="error<%= scenarioIndex %>-<%= stepIndex %>-error" class="scenario-step-collapse collapse">
-                                    <pre class=info><%= step.result.error_message.replace(/</g, '(').replace(/>/g, ')') %></pre>
+                                  <pre class=info><%= step.result.error_message.replace(/</, '<').replace(/>/, '>') %></pre>
                                 </div>
                             <% } %>
 
